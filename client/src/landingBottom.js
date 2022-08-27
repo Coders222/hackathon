@@ -8,7 +8,6 @@ function LandingBottom (){
     const Container = styled.div`
         min-width: 30vw;
         height: 1080px;
-        margin: auto;
         background-image: url(${img1});
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -24,29 +23,51 @@ function LandingBottom (){
         left: 100px;
         background-color: ${colors.lightBeige};
     `
-    const Title = styled.h1`
-        font-size: 50px;
+    const Title = styled.p`
+        font-size: 65px;
         text-align: left;
-        color: palevioletred;
+        color: ${colors.title};
         position: relative;
-        margin: 50px;
-        margin-top: 50px;
-        white-space: pre-line;
+        margin: 100px;
+        top: 50px;
 
+    `
+
+    const Subtitle = styled.p`
+        font-size: 30px;
+        text-align: center;
+        color: ${colors.title};
+        position: relative;
+        top: 20px;
+
+    `
+
+    const Oval = styled.div`
+        width: 300px;
+        height: 80px;
+        background: ${colors.lightBeige};
+        border-radius: 50%;
+        position: relative;
+        top: 200px;
+        left: 350px;
+        text-align: center;
+      
     `
     return (
         <Container>
             <TitleRect>
                 <Title> 
-                Summarize 
-                in seconds 
+                Summarize <br></br>
+                in seconds <br></br>
                 with Symbl.ai 
                 </Title>
-
-                
-
-
             </TitleRect>
+
+            <Oval>
+                <Subtitle>
+                    Get started
+                </Subtitle>
+            </Oval>
         </Container>
     );
 }

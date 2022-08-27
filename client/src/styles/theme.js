@@ -8,6 +8,7 @@ const theme = {
     },
     fonts: {
         primary: 'flix, sans-serif',
+        
     }
 
 }
