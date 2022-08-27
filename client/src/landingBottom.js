@@ -4,10 +4,13 @@ import theme from './styles/theme';
 import img1 from './images/frontImage.png';
 
 const {colors} = theme;
-function LandingBottom (){
+function LandingBottom (props){
     const Container = styled.div`
         min-width: 30vw;
         height: 1080px;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
         background-image: url(${img1});
         background-repeat: no-repeat;
         background-size: 100% 100%;

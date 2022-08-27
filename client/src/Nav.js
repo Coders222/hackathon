@@ -6,7 +6,7 @@ import gitLogo from './images/gitLogo.png';
 const {colors} = theme;
 function Nav (){
     const Container = styled.nav `
-        min-width : 100vw;
+        width : 100vw;
         height:75px;
         background-color: ${colors.lightBeige};
         text-align:center;

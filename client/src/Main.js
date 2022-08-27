@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import styled from 'styled-components';
+import theme from './styles/theme';
 import './Main.css';
 
 function Main (){
-    return (
-        <div className='Main-Wrapper'>
+    const colors = theme.colors;
+    const Container = styled.div`
+        background-color: ${colors.lightBeige};
 
-        </div>
+    `;
+    return (
+        <Container>
+            
+        </Container>
     );
 }
 export default Main;
