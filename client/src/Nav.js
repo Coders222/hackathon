@@ -21,7 +21,7 @@ function Nav (){
         background-repeat: no-repeat;
         background-size: 100% 100%;
         margin-top: 1.8vh;
-        margin-right: 1.2vw;
+        margin-right: 1.3vw;
     `;
     const Menu = styled.ul`
         float:right;
@@ -39,6 +39,7 @@ function Nav (){
         font-size: 1.3vh;
         margin-right: 1.5vw;
         margin-top: 0.2vh;
+        background-attachment: fixed;
     `;
     const Contain = styled.div`
         display:flex;

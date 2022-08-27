@@ -22,7 +22,7 @@ function LandingBottom (props){
 
     const TitleRect = styled.div`
         min-width: 1vw;
-        height: 38vh;
+        height: 36vh;
         width: 30vw;
         position: relative;
         top: 15vh;
@@ -32,7 +32,8 @@ function LandingBottom (props){
 
     `
     const Title = styled.p`
-        font-size: 3.2vw;
+        font-size: 3.1vw;
+        font-weight: bold;
         text-align: left;
         color: ${colors.title};
         position: relative;
@@ -42,12 +43,14 @@ function LandingBottom (props){
         margin-bottom: 3vh;
         top: 5vh;
         
+        
 
 
     `
 
     const Subtitle = styled.p`
         font-size: 1.5vw;
+        font-weight: 500;
         text-align: center;
         color: ${colors.title};
         position: relative;
