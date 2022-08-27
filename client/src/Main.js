@@ -66,7 +66,7 @@ function Main (){
                     <form method="post" onSubmit={onSubmit}>
                         <UploadFile>
                             <label>Upload File:</label>
-                            <input type="file" onChange = {onInputChange} />
+                            <input type="file" onChange = {onInputChange} accept="video/*"/>
                         </UploadFile>
                         <UploadButton>Submit</UploadButton>
                     </form>
