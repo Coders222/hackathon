@@ -11,7 +11,7 @@ function Nav (){
         background-color: ${colors.lightBeige};
         text-align:center;
         position: fixed;
- 
+        z-index:100;
     `;
     const Logo = styled.div `
         // border: 1px solid #000;
