@@ -8,6 +8,8 @@ function Landing (){
         <div className='Landing-Wrapper'>
             <Nav/>
             <LandingBottom/>
+
+
         </div>
     );
 }
