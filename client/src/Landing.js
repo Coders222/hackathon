@@ -7,7 +7,7 @@ function Landing (){
     return (
         <div className='Landing-Wrapper'>
             <Nav/>
-
+            <LandingBottom/>
         </div>
     );
 }
