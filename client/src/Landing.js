@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Nav from './Nav';
-import landingBottom from './landingBottom';
+import LandingBottom from './LandingBottom';
 import './Landing.css';
 
 function Landing (){
