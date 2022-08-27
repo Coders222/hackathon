@@ -57,6 +57,7 @@ function LandingBottom (props){
       
     `
     return (
+        // props.data.togglePage
         <Container>
             <TitleRect>
                 <Title> 
@@ -66,7 +67,7 @@ function LandingBottom (props){
                 </Title>
             </TitleRect>
 
-            <Oval>
+            <Oval onClick = {props.data.togglePage}>
                 <Subtitle>
                     Get started
                 </Subtitle>

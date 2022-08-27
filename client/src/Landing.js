@@ -3,11 +3,11 @@ import Nav from './Nav';
 import LandingBottom from './LandingBottom';
 import './Landing.css';
 
-function Landing (){
+function Landing (props){
     return (
         <div className='Landing-Wrapper'>
             <Nav/>
-            <LandingBottom/>
+            <LandingBottom data={props.data}/>
         </div>
     );
 }
