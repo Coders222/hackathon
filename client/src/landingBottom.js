@@ -1,21 +1,54 @@
 import { useState } from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import theme from './styles/theme';
-import img from './images/frontImage.png';
+import img1 from './images/frontImage.png';
 
 const {colors} = theme;
-function landingBottom (){
+function LandingBottom (){
     const Container = styled.div`
-        min-width : 100vw;
+        min-width: 30vw;
         height: 1080px;
-        background-image: url(${img});
-
+        margin: auto;
+        background-image: url(${img1});
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
     `;
+
+    const TitleRect = styled.div`
+        min-width: 1vw;
+        height: 350px;
+        width: 750px;
+        position: relative;
+        top: 150px;
+        left: 100px;
+        background-color: ${colors.lightBeige};
+    `
+    const Title = styled.h1`
+        font-size: 50px;
+        text-align: left;
+        color: palevioletred;
+        position: relative;
+        margin: 50px;
+        margin-top: 50px;
+        white-space: pre-line;
+
+    `
     return (
         <Container>
-            
+            <TitleRect>
+                <Title> 
+                Summarize 
+                in seconds 
+                with Symbl.ai 
+                </Title>
+
+                
+
+
+            </TitleRect>
         </Container>
     );
 }
 
-export default landingBottom;
+export default LandingBottom;

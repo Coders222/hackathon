@@ -3,7 +3,8 @@ const theme = {
         lightBeige : '#FDEEDC',
         beige: '#FFD8A9',
         tan: '#F1A661',
-        orange: '#E38B29'
+        orange: '#E38B29',
+        title: '#C07010'
     },
     fonts: {
         primary: 'flix, sans-serif',
