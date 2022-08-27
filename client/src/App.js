@@ -1,20 +1,17 @@
 
+import { useState } from 'react';
+import Landing from './Landing';
+import Main from './Main';
 import './App.css';
 
 function App() {
   console.log("orion is no longer here");
+  const [data, setData] = useState(false);
   return (
     <div className="App">
-      <h1>
-        Test
-      </h1>
-      
-      <h2>andy liang</h2>
+      {data ? <Main/>:<Landing/>}
     </div>
-
-   
   );
-  
 }
 
 export default App;
