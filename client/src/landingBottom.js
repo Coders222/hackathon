@@ -4,7 +4,7 @@ import theme from './styles/theme';
 import img from './images/frontImage.png';
 
 const {colors} = theme;
-function landingBottom (){
+function LandingBottom (){
     const Container = styled.div`
         min-width : 100vw;
         height: 1080px;
@@ -18,4 +18,4 @@ function landingBottom (){
     );
 }
 
-export default landingBottom;
+export default LandingBottom;
