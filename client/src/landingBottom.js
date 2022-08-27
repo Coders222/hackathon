@@ -6,9 +6,8 @@ import img1 from './images/frontImage.png';
 const {colors} = theme;
 function LandingBottom (props){
     const Container = styled.div`
-        min-width: 30vw;
-        width: 99.2vw;
-        height: 100vh;
+        width: 100%;
+        height: 200vh;
         margin: auto;
         background-image: url(${img1});
         background-repeat: no-repeat;
