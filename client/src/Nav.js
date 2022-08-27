@@ -6,20 +6,22 @@ import gitLogo from './images/gitLogo.png';
 const {colors} = theme;
 function Nav (){
     const Container = styled.nav `
-        width : 100vw;
-        height:75px;
+        width : 99.2vw;
+        height: 7vh;
         background-color: ${colors.lightBeige};
         text-align:center;
-        padding-right: 25px;
+ 
     `;
     const Logo = styled.div `
         // border: 1px solid #000;
         float:right;
         background-image: url(${props => props.img});
-        width:60px;
-        height: 60px;
+        width:2vw;
+        height: 3.5vh;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        margin-top: 1.8vh;
+        margin-right: 1.2vw;
     `;
     const Menu = styled.ul`
         float:right;
@@ -31,9 +33,12 @@ function Nav (){
     const MenuItem = styled.li`
         float:right;
         color:#000000;
-        width:100%;
-        height:100%;
-        margin-left:25px;
+        width:3vw;
+        height:5vh;
+        margin-left:1vw;
+        font-size: 1.3vh;
+        margin-right: 1.5vw;
+        margin-top: 0.2vh;
     `;
     const Contain = styled.div`
         display:flex;
