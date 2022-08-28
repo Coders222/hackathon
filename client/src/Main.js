@@ -5,7 +5,7 @@ import './Main.css';
 import gitLogo from './images/gitLogo.png';
 import axios from 'axios';
 import { toast} from 'react-toastify';
-import { SymblProvider, Transcripts } from '@symblai/react-elements';
+import { SymblProvider, Transcripts,Topics } from '@symblai/react-elements';
 
 function Main (){
     const symblConfig = {
@@ -101,9 +101,17 @@ function Main (){
                     transcriptRowClassName="testClassRow"
                     transcriptRowHeaderClassName=""
                     transcriptClassName=""
+                    showAvatar = {false}
                     avatarClassName="avatarClass"
                     />
 
+                </div>
+                <div>
+                <Topics
+                    conversationId={6746205057449984}
+                    confidenceThreshold={0.5}
+                    orderBy={'score'}
+                    />
                 </div>
                 </SymblProvider>
             </Container>
