@@ -22,11 +22,15 @@ function Main (){
 
     const Dropbox = styled.div`
         position: relative;
-        height: 500px;
+        height: 200px;
         width: 500px;
         top: 300px;
         left: 150px;
         background-color: #FFFFFF; 
+    `
+
+    const btn = styled.p`
+
     `
 
     const Footer = styled.div`
@@ -87,7 +91,7 @@ function Main (){
                     </h1>
                     <form method="post" onSubmit={onSubmit}>
                         <UploadFile>
-                            <input type="file" onChange = {onInputChange} accept="video/*"/>
+                            <input type="file" id="btn" onChange = {onInputChange} accept="video/*"/>
                         </UploadFile>
                         <UploadButton>Submit</UploadButton>
                     </form>
