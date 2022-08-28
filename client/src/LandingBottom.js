@@ -1,30 +1,34 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import theme from './styles/theme';
-import img1 from './images/frontImage.png';
+import img1 from './images/test1.png';
+import robot from './images/boxes1.png';
+import box from './images/boxes2.png';
 
 const {colors} = theme;
 function LandingBottom (props){
     const Container = styled.div`
         width: 100%;
         height: 200vh;
+        margin-top: 100vh;
         margin: auto;
         border-top:1px ${colors.lightBeige} solid;
         
     `;
+
     const FrontImage = styled.div`
         width: 100%;
-        height: 1080;
+        height: 300vh;
         margin: auto;
         background-image: url(${img1});
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 100;
         background-position: relative;
         background-size: cover;
-        background-attachment: fixed;
-        border-top:1px ${colors.lightBeige} solid;
-        position: sticky;
-        
+    `;
+
+    const robot = styled.div`
+ 
     `;
 
     const TitleRect = styled.div`
@@ -77,9 +81,6 @@ function LandingBottom (props){
             background-size: 100%;
             transition: background 0s;
         }    
-        &:unhover {
-            transition-delay: 2s;
-        }
         width: 15vw;
         height: 8vh;
         background: ${colors.lightBeige};
@@ -88,11 +89,32 @@ function LandingBottom (props){
         border-radius: 64px;
         position: relative;
         top: 20vh;
-        margin-right: 60vw;
-        padding: 10px 20px;
+        right: 22.5vw;
         display: inline-block;
         cursor: pointer;
     `
+    const Oval2 = styled.button`
+    &:hover {
+        background-color: #FFD8A9;
+        transition: background-color 1s;
+    }    
+    &:active {
+        background-color: #F1A661;
+        background-size: 100%;
+        transition: background 0s;
+    }    
+    width: 15vw;
+    height: 8vh;
+    background: ${colors.lightBeige};
+    border-radius: 50%;
+    border: none;
+    border-radius: 64px;
+    position: relative;
+    top: 252vh;
+    right: 5.8vw;
+    display: inline-block;
+    cursor: pointer;
+`
     
     return (
         // props.data.togglePage
@@ -111,6 +133,11 @@ function LandingBottom (props){
                     Get started
                 </Subtitle>
             </Oval>
+            <Oval2>
+                <Subtitle onClick = {props.data.togglePage}>
+                    Get started
+                </Subtitle>
+            </Oval2>
             </FrontImage>
 
         </Container>
