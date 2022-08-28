@@ -9,6 +9,13 @@ function LandingBottom (props){
         width: 100%;
         height: 200vh;
         margin: auto;
+        border-top:1px ${colors.lightBeige} solid;
+        
+    `;
+    const FrontImage = styled.div`
+        width: 100%;
+        height: 1080;
+        margin: auto;
         background-image: url(${img1});
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -81,19 +88,21 @@ function LandingBottom (props){
     return (
         // props.data.togglePage
         <Container>
-            <TitleRect>
-                <Title> 
-                Summarize <br></br>
-                in Seconds <br></br>
-                with Symbl.ai 
-                </Title>
-            </TitleRect>
-
-            <Oval>
-                <Subtitle>
+            <FrontImage>
+                <TitleRect>
+                    <Title> 
+                        Summarize <br></br>
+                        in Seconds <br></br>
+                        with Symbl.ai 
+                    </Title>
+                </TitleRect>
+                <Oval>
+                    <Subtitle onClick = {props.data.togglePage}>
                     Get started
-                </Subtitle>
-            </Oval>
+                    </Subtitle>
+                </Oval>
+            </FrontImage>
+
         </Container>
     );
 }
