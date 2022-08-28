@@ -39,8 +39,9 @@ function Nav (){
         width:3vw;
         height:5vh;
         font-size: 1.3vh;
-        margin-top: 0.2vh;
-        margin-left: 85.5vw;
+        top: 1vh;
+        margin-bottom: 0.3vh;
+        margin-left: 84vw;
         position: fixed;
         
     `;
@@ -51,8 +52,8 @@ function Nav (){
         width:3vw;
         height:5vh;
         font-size: 1.3vh;
-        margin-top: 0.2vh;
-        margin-left: 90.5vw;
+        top: 1vh;
+        margin-left: 89vw;
         position: fixed;
     `;
 

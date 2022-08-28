@@ -42,7 +42,6 @@ function LandingBottom (props){
         border: none;
         border-radius: 64px;
         background-color: ${colors.lightBeige};
-        overflow: hidden;
         background-attachment: fixed;
         
     `
@@ -53,9 +52,6 @@ function LandingBottom (props){
         color: ${colors.title};
         position: relative;
         margin-left: 5vw;
-        margin-right: 5vw;
-        margin-top: 1vh;
-        margin-bottom: 3vh;
         top: 5vh;
     `
 
