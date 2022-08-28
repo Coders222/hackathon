@@ -16,6 +16,7 @@ function LandingBottom (props){
         background-size: cover;
         background-attachment: fixed;
         border-top:1px ${colors.lightBeige} solid;
+        position: sticky;
         
     `;
 
@@ -26,9 +27,13 @@ function LandingBottom (props){
         position: relative;
         top: 15vh;
         left: 10vh;
+        border-radius: 50%;
+        border: none;
+        border-radius: 64px;
         background-color: ${colors.lightBeige};
+        overflow: hidden;
         background-attachment: fixed;
-
+        
     `
     const Title = styled.p`
         font-size: 3.1vw;
@@ -38,13 +43,9 @@ function LandingBottom (props){
         position: relative;
         margin-left: 5vw;
         margin-right: 5vw;
-        margin-top: 3vh;
+        margin-top: 1vh;
         margin-bottom: 3vh;
         top: 5vh;
-        
-        
-
-
     `
 
     const Subtitle = styled.p`
@@ -53,24 +54,39 @@ function LandingBottom (props){
         text-align: center;
         color: ${colors.title};
         position: relative;
-        top: 2vh;
+        margin-top: 2.3vh;
+        text-decoration: none;
 
 
     `
 
-    const Oval = styled.div`
+    const Oval = styled.button`
+        &:hover {
+            background-color: #FFD8A9;
+            transition: background-color 1s;
+        }    
+        &:active {
+            background-color: #F1A661;
+            background-size: 100%;
+            transition: background 0s;
+        }    
+        &:unhover {
+            transition-delay: 2s;
+        }
         width: 15vw;
         height: 8vh;
         background: ${colors.lightBeige};
         border-radius: 50%;
+        border: none;
+        border-radius: 64px;
         position: relative;
         top: 20vh;
-        left: 25vh;
-        text-align: center;
-        
-        
-      
+        margin-right: 60vw;
+        padding: 10px 20px;
+        display: inline-block;
+        cursor: pointer;
     `
+    
     return (
         // props.data.togglePage
         <Container>
@@ -81,8 +97,8 @@ function LandingBottom (props){
                 with Symbl.ai 
                 </Title>
             </TitleRect>
-
-            <Oval onClick = {props.data.togglePage}>
+            
+            <Oval>
                 <Subtitle>
                     Get started
                 </Subtitle>
@@ -91,4 +107,5 @@ function LandingBottom (props){
     );
 }
 
+// onClick = {props.data.togglePage}
 export default LandingBottom;
