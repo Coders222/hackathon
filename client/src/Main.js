@@ -43,11 +43,10 @@ function Main (){
     const UploadFile = styled.div `
         display:flex;
         flex-direction: column;
-        width = 100%;
+        width: 100%;
         justify-content:center;
     `;
     const UploadButton = styled.button`
-    
     `;
     const [files, setFiles] = useState([]);
     const onInputChange = (e) => {
