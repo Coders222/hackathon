@@ -35,7 +35,7 @@ function Main (){
         text-align: center;
         position: relative;
         bottom: 0px;
-        border:1px ${colors.mocha} solid;
+        border-bottom:5px ${colors.mocha} solid;
     `
     const Logo = styled.div `
         float:left;
@@ -83,11 +83,10 @@ function Main (){
                 <SymblProvider config={symblConfig}>
                 <Dropbox>
                     <h1 font-size= "10px">
-                        dropbox
+                        Upload Your File
                     </h1>
                     <form method="post" onSubmit={onSubmit}>
                         <UploadFile>
-                            <label>Upload File:</label>
                             <input type="file" onChange = {onInputChange} accept="video/*"/>
                         </UploadFile>
                         <UploadButton>Submit</UploadButton>
@@ -95,6 +94,7 @@ function Main (){
                 </Dropbox>
                 <div>
                 <Transcripts
+                    showAvatar= {false}
                     conversationId={6746205057449984}
                     highlightPhrases={['action_phrase']}
                     transcriptsWrapperClassName="testWrapperClass"
