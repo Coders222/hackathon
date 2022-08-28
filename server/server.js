@@ -1,6 +1,7 @@
 var express = require('express');
 const multer = require('multer');
 const cors = require('cors');
+
 const app = express();
 app.use(cors());
 app.use(express.static('public'));
@@ -8,7 +9,6 @@ const port = 8888;
 app.get('/', (req, res) => {
     res.send('hello people');
 });
-
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -29,8 +29,10 @@ app.post('/upload', (req, res) => {
 
         return res.status(200).send(req.files)
     })
-    console.log(req);
 });
+var authToken = null;
 app.listen(port, () => {
     console.log('listening to the port: ' + port);
+    
+    
 });
