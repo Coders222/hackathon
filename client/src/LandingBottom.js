@@ -26,6 +26,9 @@ function LandingBottom (props){
         position: relative;
         top: 15vh;
         left: 10vh;
+        border-radius: 50%;
+        border: none;
+        border-radius: 64px;
         background-color: ${colors.lightBeige};
         background-attachment: fixed;
 
@@ -53,21 +56,25 @@ function LandingBottom (props){
         text-align: center;
         color: ${colors.title};
         position: relative;
-        top: 2vh;
+        margin-top: 2.3vh;
+        text-decoration: none;
 
 
     `
 
-    const Oval = styled.div`
+    const Oval = styled.button`
         width: 15vw;
         height: 8vh;
         background: ${colors.lightBeige};
         border-radius: 50%;
+        border: none;
+        border-radius: 64px;
         position: relative;
         top: 20vh;
-        left: 25vh;
-        text-align: center;
-        
+        margin-right: 60vw;
+        padding: 10px 20px;
+        display: inline-block;
+        cursor: pointer;
         
       
     `
@@ -82,7 +89,7 @@ function LandingBottom (props){
                 </Title>
             </TitleRect>
 
-            <Oval onClick = {props.data.togglePage}>
+            <Oval>
                 <Subtitle>
                     Get started
                 </Subtitle>
@@ -91,4 +98,5 @@ function LandingBottom (props){
     );
 }
 
+// onClick = {props.data.togglePage}
 export default LandingBottom;
