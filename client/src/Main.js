@@ -101,7 +101,7 @@ function Main (){
                     transcriptRowClassName="testClassRow"
                     transcriptRowHeaderClassName=""
                     transcriptClassName=""
-                    showAvatar = {false}
+
                     avatarClassName="avatarClass"
                     />
 
@@ -109,7 +109,7 @@ function Main (){
                 <div>
                 <Topics
                     conversationId={6746205057449984}
-                    confidenceThreshold={0.5}
+                    confidenceThreshold={0.1}
                     orderBy={'score'}
                     />
                 </div>
