@@ -57,11 +57,12 @@ function Main (){
         e.preventDefault();
 
         const data = new FormData();
-
+        console.log(files);
         for(let i = 0; i < files.length; i++) {
+            console.log(files[i]);
             data.append('file', files[i]);
         }
-        console.log(data);
+        console.log(data.getAll('file'));
         axios.post('//localhost:8888/upload', data)
             .then((response) => {
                 toast.success('Upload Success');
