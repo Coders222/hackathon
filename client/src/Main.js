@@ -5,13 +5,19 @@ import './Main.css';
 import gitLogo from './images/gitLogo.png';
 import axios from 'axios';
 import { toast} from 'react-toastify';
+import { SymblProvider, Transcripts } from '@symblai/react-elements';
 
 function Main (){
+    const symblConfig = {
+        appId: '6856564b39714c4e4e7755774f79306f38694245583267326f69666450535565',
+        appSecret: '31614534637363354f364567392d7a4455687331464341575f35634377727a696b476f634331755634784e4547306f3675336378624c6a53695267526d39506e',
+    };
     const colors = theme.colors;
     const Container = styled.div`
         background-color: ${colors.lightBeige};
         height: 1080px;
         border-top:1px ${colors.lightBeige} solid;
+        display:flex;
     `;
 
     const Dropbox = styled.div`
@@ -74,6 +80,7 @@ function Main (){
     return (
         <body>
             <Container>
+                <SymblProvider config={symblConfig}>
                 <Dropbox>
                     <h1 font-size= "10px">
                         dropbox
@@ -86,8 +93,21 @@ function Main (){
                         <UploadButton>Submit</UploadButton>
                     </form>
                 </Dropbox>
-                
+                <div>
+                <Transcripts
+                    conversationId={6746205057449984}
+                    highlightPhrases={['action_phrase']}
+                    transcriptsWrapperClassName="testWrapperClass"
+                    transcriptRowClassName="testClassRow"
+                    transcriptRowHeaderClassName=""
+                    transcriptClassName=""
+                    avatarClassName="avatarClass"
+                    />
+
+                </div>
+                </SymblProvider>
             </Container>
+            
             <Footer>
                 <Logo img = {gitLogo} >
 
