@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import theme from './styles/theme';
 import './Main.css';
 import gitLogo from './images/gitLogo.png';
-
+import axios from 'axios';
+import { toast} from 'react-toastify';
 
 function Main (){
     const colors = theme.colors;
@@ -54,7 +55,21 @@ function Main (){
     };
     const onSubmit = (e) =>{
         e.preventDefault();
-        console.log(files);
+
+        const data = new FormData();
+
+        for(let i = 0; i < files.length; i++) {
+            data.append('file', files[i]);
+        }
+        console.log(data);
+        axios.post('//localhost:8888/upload', data)
+            .then((response) => {
+                toast.success('Upload Success');
+                
+            })
+            .catch((e) => {
+                toast.error('Upload Error')
+            })
     }
     return (
         <body>
