@@ -14,7 +14,8 @@ function Main (){
     };
     const colors = theme.colors;
     const conId= 5276491777048576;
-
+    const [url, setUrl] = useState("");
+    const [process, setProcess] = useState(false);
     const Container = styled.div`
         background-color: ${colors.lightBeige};
         height: 1080px;
@@ -44,16 +45,28 @@ function Main (){
         height:515px;
         width:500px
     `;
+    const DataContainer = styled.div`
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+    `;
     const Dropbox = styled.div`
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin:10px;
         margin-left:auto;
         margin-top:auto;
         margin-bottom:auto;
         height: 500px;
-        width: 500px;
-        top: 100px;
-        left: 25px;
+        padding: 50px;
+        padding-bottom: 75px;
+        width: 300px;
         background-color: #FFFFFF; 
+    `
+
+    const btn = styled.p`
+
     `
 
     const Footer = styled.div`
@@ -86,6 +99,10 @@ function Main (){
     const onInputChange = (e) => {
         setFiles(e.target.files)
     };
+    const onUrlChange = (e) => {
+        setProcess(false);
+        setUrl(e.target.value)
+    }
     const onSubmit = (e) =>{
         e.preventDefault();
 
@@ -103,7 +120,8 @@ function Main (){
             })
             .catch((e) => {
                 toast.error('Upload Error')
-            })
+        })
+        setProcess(true);
     }
 
     return (
@@ -114,17 +132,26 @@ function Main (){
                     <h1 font-size= "10px">
                         Upload Your File
                     </h1>
+                    <div>
                     <form method="post" onSubmit={onSubmit}>
                         <UploadFile>
-                            <input type="file" onChange = {onInputChange} accept="video/*"/>
+                            <input type="file" id="btn" onChange = {onInputChange} accept="video/*"/>
                         </UploadFile>
                         <UploadButton>Submit</UploadButton>
                     </form>
+                    </div>
+                    <div  >
+                        <UploadFile>
+                            <input type="text" id="btn" onChange = {onUrlChange} value = {url} />
+                        </UploadFile>
+                        <UploadButton onClick={() => (!process && setProcess(true))}>Submit</UploadButton>
+                    </div>
                 </Dropbox>
+                <DataContainer>
                 <TransBox>
-                <h1>Transcript</h1>
+                <h1>Transcript</h1> 
                 <TransContainer>
-                <Transcripts
+                {process&&<Transcripts
                     showAvatar= {false}
                     conversationId={conId}
                     highlightPhrases={['action_phrase']}
@@ -134,21 +161,21 @@ function Main (){
                     transcriptClassName=""
 
                     avatarClassName="avatarClass"
-                    />
+                    />}
 
                 </TransContainer>
                 </TransBox>
                 <KeyBox>
                 <h1>Key Words</h1>
                 <KeyContainer>
-                <Topics
+                {process&&<Topics
                     conversationId={conId}
                     confidenceThreshold={0.1}
                     orderBy={'score'}
-                    />
+                    />}
                 </KeyContainer>
                 </KeyBox>
-                
+                </DataContainer>
                 </SymblProvider>
             </Container>
             
