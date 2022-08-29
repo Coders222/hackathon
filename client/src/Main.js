@@ -13,19 +13,46 @@ function Main (){
         appSecret: '31614534637363354f364567392d7a4455687331464341575f35634377727a696b476f634331755634784e4547306f3675336378624c6a53695267526d39506e',
     };
     const colors = theme.colors;
+    const conId= 5276491777048576;
+
     const Container = styled.div`
         background-color: ${colors.lightBeige};
         height: 1080px;
         border-top:1px ${colors.lightBeige} solid;
         display:flex;
     `;
-
+    const TransBox = styled.div`
+        background-color: ${colors.tan};
+        height: 610px;
+        width:500px
+        border-radius: 15px;
+        margin-right:5vw;;
+        margin-left: auto;
+    `;
+    const KeyBox = styled.div`
+        background-color: ${colors.tan};
+        width = 400px;
+        height 300px;
+        border-radius: 15px;
+        margin-right: auto;
+    `;
+    const KeyContainer = styled.div`
+        width:300px;
+        
+    `;
+    const TransContainer = styled.div`
+        height:515px;
+        width:500px
+    `;
     const Dropbox = styled.div`
-        position: relative;
+        margin:10px;
+        margin-left:auto;
+        margin-top:auto;
+        margin-bottom:auto;
         height: 500px;
         width: 500px;
-        top: 300px;
-        left: 150px;
+        top: 100px;
+        left: 25px;
         background-color: #FFFFFF; 
     `
 
@@ -42,7 +69,8 @@ function Main (){
         background-image: url(${props => props.img});
         width:60px;
         height: 60px;
-        margin: 10px;
+        margin-left: 10px;
+        margin-top:10px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     `;
@@ -77,6 +105,7 @@ function Main (){
                 toast.error('Upload Error')
             })
     }
+
     return (
         <body>
             <Container>
@@ -92,10 +121,12 @@ function Main (){
                         <UploadButton>Submit</UploadButton>
                     </form>
                 </Dropbox>
-                <div>
+                <TransBox>
+                <h1>Transcript</h1>
+                <TransContainer>
                 <Transcripts
                     showAvatar= {false}
-                    conversationId={6746205057449984}
+                    conversationId={conId}
                     highlightPhrases={['action_phrase']}
                     transcriptsWrapperClassName="testWrapperClass"
                     transcriptRowClassName="testClassRow"
@@ -105,14 +136,19 @@ function Main (){
                     avatarClassName="avatarClass"
                     />
 
-                </div>
-                <div>
+                </TransContainer>
+                </TransBox>
+                <KeyBox>
+                <h1>Key Words</h1>
+                <KeyContainer>
                 <Topics
-                    conversationId={6746205057449984}
+                    conversationId={conId}
                     confidenceThreshold={0.1}
                     orderBy={'score'}
                     />
-                </div>
+                </KeyContainer>
+                </KeyBox>
+                
                 </SymblProvider>
             </Container>
             
